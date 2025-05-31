@@ -10,14 +10,13 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long postId;
+    
     private String title;
     private String content;
     private Date date;
 
     @ManyToOne
     private User userId;
-
-    
 
     public Post(final Long postId, final String title, final String content, final Date date, final User userId) {
         this.postId = postId;
@@ -66,8 +65,4 @@ public class Post {
     public void setUserId(User userId) {
         this.userId = userId;
     }
-
-    
-
-
 }   

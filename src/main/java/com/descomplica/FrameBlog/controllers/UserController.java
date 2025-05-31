@@ -23,7 +23,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/save")
+    @PostMapping(path ="/save")
     public @ResponseBody User saveUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
@@ -45,7 +45,7 @@ public class UserController {
 
     @DeleteMapping(path = "/delete/{id}")
     public ResponseEntity<?> delete(@RequestParam final Long id) {
-        userService.delete(id);
+        userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
 
