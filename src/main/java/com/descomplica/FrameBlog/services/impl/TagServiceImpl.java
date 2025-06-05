@@ -10,8 +10,8 @@ import com.descomplica.FrameBlog.repositories.TagRepository;
 import com.descomplica.FrameBlog.services.TagService;
 
 @Service
-public class TagServiceImpl {
-    @Autowired
+public class TagServiceImpl implements TagService {
+    @Autowired 
     private TagRepository tagRepository;
 
     @Override
